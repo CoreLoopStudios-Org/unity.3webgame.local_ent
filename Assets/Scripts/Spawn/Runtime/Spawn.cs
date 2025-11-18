@@ -71,7 +71,6 @@ public class Spawn : MonoBehaviour
     public void OnButtonClick(int i)
     {
         clickedIndex.Raise(i);
-        //resetEvent.Raise();
     }
 
 
