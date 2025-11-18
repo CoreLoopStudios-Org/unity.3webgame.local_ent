@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using VirtueSky.Events;
 using VirtueSky.UIButton;
 
-public class GameController : MonoBehaviour
+public class FlipUI : MonoBehaviour
 {
     
     public IntegerEvent integerEvent;
