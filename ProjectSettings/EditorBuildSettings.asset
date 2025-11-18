@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/ElProfesorKudo_Firebase_Asset/Scene/ElProfesorKudo - Firebase Toolkit
       Example Scene.unity
     guid: 1e4f53107259f41718bcd497209accaa

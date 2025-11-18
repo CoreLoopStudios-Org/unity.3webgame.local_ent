@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6442265710494941837}
   - component: {fileID: 2938858830352969446}
   - component: {fileID: 8179523571228498574}
-  - component: {fileID: 3513169736692941795}
+  - component: {fileID: 8860466380368259335}
   m_Layer: 5
   m_Name: '{0} Button'
   m_TagString: Untagged
@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2938858830352969446
 CanvasRenderer:
@@ -67,8 +67,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 49eb15ea78dd04d439844b8277650098, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3513169736692941795
+--- !u!114 &8860466380368259335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,9 +86,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6323385442849834544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b68f598bc9541c7b9f48bf2b23de502, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_EditorClassIdentifier: Virtuesky.Sunflower.Button::VirtueSky.UIButton.ButtonUI
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
@@ -121,6 +121,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  clickButtonEvent: {fileID: 11400000, guid: 9a41849ba5b114ea8a8170633b75a2a3, type: 2}
+  isMotion: 1
+  easingTypes: 15
+  scale: 0.9
+  isShrugOver: 1
+  timeShrug: 0.2
+  strength: 0.2
+  useSoundFx: 1
+  playSfxEvent: {fileID: 11400000, guid: 69784be2f515a4847aa35ecdbb2e083f, type: 2}
+  soundDataClickButton: {fileID: 11400000, guid: f9724595e946b41e08c0da8c2ef1cfb8, type: 2}
 --- !u!1 &7086557036871377659
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1545505436159760151
 RectTransform:
   m_ObjectHideFlags: 0
@@ -186,7 +196,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: '{0}'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -213,10 +223,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

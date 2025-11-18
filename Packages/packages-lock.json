@@ -7,41 +7,6 @@
       "dependencies": {},
       "hash": "73a63b7f672b88f7e9992f6917eb458a8cbb6fa9"
     },
-    "com.google.ads.mobile": {
-      "version": "https://github.com/googleads/googleads-mobile-unity.git?path=packages/com.google.ads.mobile#v10.5.0",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.google.external-dependency-manager": "1.2.186",
-        "com.unity.modules.androidjni": "1.0.0"
-      },
-      "hash": "ffdcf8fdbb21f4408476ed172b99cf40e89e7aeb"
-    },
-    "com.google.external-dependency-manager": {
-      "version": "https://github.com/googlesamples/unity-jar-resolver.git?path=upm#v1.2.186",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "6fa58d3773ef039ea9563454928c235bb308ad8f"
-    },
-    "com.google.firebase.app": {
-      "version": "https://github.com/RageAgainstThePixel/com.google.firebase.app.git#13.4.0",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.google.external-dependency-manager": "1.2.186"
-      },
-      "hash": "668f15a2673ea873840fb141cd26e79233252b98"
-    },
-    "com.google.firebase.auth": {
-      "version": "https://github.com/RageAgainstThePixel/com.google.firebase.auth.git#13.4.0",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.google.firebase.app": "13.4.0"
-      },
-      "hash": "49ffef8ce18c32d8cac9c4d349dec6312375815f"
-    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,

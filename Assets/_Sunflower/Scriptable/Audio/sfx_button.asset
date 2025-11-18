@@ -20,4 +20,4 @@ MonoBehaviour:
   fadeOutDuration: 0
   getType: 0
   audioClips:
-  - {fileID: 8300000, guid: 9ec83caf55f154a359f505d151e0b026, type: 3}
+  - {fileID: 8300000, guid: 330270227a8d84247a84dff13e629dde, type: 3}
