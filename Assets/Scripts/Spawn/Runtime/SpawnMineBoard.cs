@@ -15,6 +15,7 @@ public class SpawnMineBoard : MonoBehaviour
     
     private bool isSpawned = false;
     
+    
     void OnEnable()
     {
         

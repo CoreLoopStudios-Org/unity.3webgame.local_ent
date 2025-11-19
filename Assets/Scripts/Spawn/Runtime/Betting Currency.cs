@@ -18,8 +18,17 @@ public class BettingCurrency : MonoBehaviour
     public void IncreaseBet()
     {
         currentAmmount = float.Parse(CurrencyAmountText.text);
-        currentAmmount += increaseBetAmmount;
-        CurrencyAmountText.text = currentAmmount.ToString();
+        if (currentAmmount < 200.00f)
+        {
+            currentAmmount += increaseBetAmmount;
+            CurrencyAmountText.text = currentAmmount.ToString();
+        }
+        else
+        {
+            currentAmmount = 200;
+            CurrencyAmountText.text = currentAmmount.ToString();
+        }
+        
     }
     
     public void DecreaseBet()
