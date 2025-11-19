@@ -19,6 +19,7 @@ public class Spawn : MonoBehaviour
 
     private void OnEnable()
     {
+        Spawn25();
         eventNoParm.AddListener(SpawnRequest);
         resetEvent.AddListener(Reset);
     }
@@ -33,14 +34,14 @@ public class Spawn : MonoBehaviour
     {
         if (!isSpawned)
         {
-            Spawn100();
+            Spawn25();
         }
     }
         
     [ContextMenu("Spawn")]
-    public void Spawn100()
+    public void Spawn25()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 25; i++)
         {
             var button = Instantiate(prefab, transform.position, transform.rotation, transform);
             //TMP_Text text = button.GetComponentInChildren<TMP_Text>();
@@ -63,7 +64,7 @@ public class Spawn : MonoBehaviour
     {
         UnSpawn();
         yield return new WaitForSeconds(i);
-        Spawn100();
+        Spawn25();
     }
     
     
@@ -71,7 +72,6 @@ public class Spawn : MonoBehaviour
     public void OnButtonClick(int i)
     {
         clickedIndex.Raise(i);
-        //resetEvent.Raise();
     }
 
 
