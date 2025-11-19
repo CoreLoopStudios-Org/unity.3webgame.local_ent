@@ -20,13 +20,13 @@ public class Spawn : MonoBehaviour
     private void OnEnable()
     {
         Spawn25();
-        eventNoParm.AddListener(SpawnRequest);
+        eventNoParm.AddListener(PlayGame);
         resetEvent.AddListener(Reset);
     }
     
     private void OnDisable()
     {
-        eventNoParm.RemoveListener(SpawnRequest);
+        eventNoParm.RemoveListener(PlayGame);
         resetEvent.RemoveListener(Reset);
     }
 
@@ -34,7 +34,16 @@ public class Spawn : MonoBehaviour
     {
         if (!isSpawned)
         {
-            Spawn25();
+            PlayGame();
+        }
+    }
+
+    public void PlayGame()
+    {
+        var transformChildCount = transform.childCount;
+        for (int i = transformChildCount - 1; i >= 0; i--)
+        {
+            transform.GetChild(i).GetComponent<Button>().interactable = true;
         }
     }
         
@@ -50,7 +59,10 @@ public class Spawn : MonoBehaviour
             button.onClick.AddListener(() => OnButtonClick(index));
             var gameObjectName = button.gameObject.name;
             button.gameObject.name = String.Format(gameObjectName, i.ToString());
+            
+            button.interactable = false;
         }
+        
         isSpawned = true;
     }
 

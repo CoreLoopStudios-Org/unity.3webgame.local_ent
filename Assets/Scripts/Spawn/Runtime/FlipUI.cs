@@ -13,7 +13,6 @@ public class FlipUI : MonoBehaviour
     private void OnEnable()
     {
         integerEvent.AddListener(Flipface);
-        //TimeSetReset();
     }
 
 
