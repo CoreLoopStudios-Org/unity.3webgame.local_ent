@@ -15,12 +15,12 @@ MonoBehaviour:
   description: 
   valueDebug: 0
   typeId: 0
-  guid: 
+  guid: eb04787ac735a4ce084d68a0699872d8
   customId: 
   initializeValue: 0
-  isSetData: 0
+  isSetData: 1
   isSaveData: 0
   isRaiseEvent: 0
-  currentValue: 0
+  currentValue: 24
   isClamped: 0
   minMax: {x: 0, y: 100}

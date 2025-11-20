@@ -18,9 +18,9 @@ MonoBehaviour:
   guid: 4cce74ca65e7692499535b5ed933aaf9
   customId: 
   initializeValue: 0
-  isSetData: 0
+  isSetData: 1
   isSaveData: 0
   isRaiseEvent: 0
-  currentValue: 0
+  currentValue: 15
   isClamped: 0
   minMax: {x: 0, y: 100}
