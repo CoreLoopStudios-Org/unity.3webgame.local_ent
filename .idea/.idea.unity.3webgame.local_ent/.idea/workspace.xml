@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6f93c5a3-54f1-4cc9-9a20-d1e8e36c1ced" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/{0} Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/{0} Button.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Currency Calculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Currency Calculator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/FlipUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/FlipUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TempDataStorage/data_0.sun" beforeDir="false" afterPath="$PROJECT_DIR$/TempDataStorage/data_0.sun" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +122,7 @@
       <workItem from="1763519078262" duration="1961000" />
       <workItem from="1763523795240" duration="23181000" />
       <workItem from="1763606162410" duration="18744000" />
-      <workItem from="1763636616259" duration="1966000" />
+      <workItem from="1763636616259" duration="4102000" />
     </task>
     <servers />
   </component>
