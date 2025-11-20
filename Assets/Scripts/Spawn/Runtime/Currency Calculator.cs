@@ -73,16 +73,11 @@ public class CurrencyCalculator : MonoBehaviour
         // Edge case: no safe tiles left (shouldn't happen in normal gameplay)
         if (remainingSafeTiles <= 0) return 1f;
         
-        // Probability of next tile being safe
         float probability = (float)remainingSafeTiles / remainingTiles;
-        
-        // Base multiplier (inverse of probability)
         float baseMultiplier = 1f / probability;
+        float riskRewardRate = 0.2f;
         
-        // Apply house edge (95% RTP - adjust between 0.90-0.99 for different payouts)
-        float houseEdge = 0.90f;
-        
-        return 1f + ((baseMultiplier - 1f) * houseEdge);
+        return 1f + ((baseMultiplier - 1f) * riskRewardRate);
     }
     
     void UpdateInitialMultiplier()

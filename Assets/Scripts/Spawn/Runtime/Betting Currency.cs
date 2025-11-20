@@ -5,9 +5,9 @@ public class BettingCurrency : MonoBehaviour
 {
 
     public TMP_Text CurrencyAmountText;
-    [SerializeField]  private float startingBetAmmount = 3.25f ;
-    [SerializeField]  private float increaseBetAmmount = 0.5f ;
-    [SerializeField]  private float decreaseBetAmmount = 0.5f ;
+    [SerializeField]  public float startingBetAmmount = 3.25f ;
+    [SerializeField]  private float increaseBetAmmount = 2f ;
+    [SerializeField]  private float decreaseBetAmmount = 2f ;
     
     float currentAmmount;
 
@@ -18,14 +18,15 @@ public class BettingCurrency : MonoBehaviour
     public void IncreaseBet()
     {
         currentAmmount = float.Parse(CurrencyAmountText.text);
-        if (currentAmmount < 200.00f)
+        float newAmount = currentAmmount + increaseBetAmmount;
+        if (newAmount <= 15.00f)
         {
-            currentAmmount += increaseBetAmmount;
+            currentAmmount = newAmount;
             CurrencyAmountText.text = currentAmmount.ToString();
         }
         else
         {
-            currentAmmount = 200;
+            currentAmmount = 15f;
             CurrencyAmountText.text = currentAmmount.ToString();
         }
         
@@ -34,15 +35,17 @@ public class BettingCurrency : MonoBehaviour
     public void DecreaseBet()
     {
         currentAmmount = float.Parse(CurrencyAmountText.text);
-        if (currentAmmount > 0.00f)
+        float newAmount = currentAmmount - decreaseBetAmmount;
+
+        if (newAmount >= 0.50f)
         {
-            currentAmmount -= decreaseBetAmmount;
-            CurrencyAmountText.text = currentAmmount.ToString();
+            currentAmmount = newAmount;
+            CurrencyAmountText.text = currentAmmount.ToString("F2");
         }
         else
         {
-            currentAmmount = 0;
-            CurrencyAmountText.text = currentAmmount.ToString();
+            currentAmmount = 0.50f;
+            CurrencyAmountText.text = currentAmmount.ToString("F2");
         }
     }
 }

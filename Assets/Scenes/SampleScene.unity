@@ -5103,9 +5103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Spawn.Runtime::BettingCurrency
   CurrencyAmountText: {fileID: 1977632762}
-  startingBetAmmount: 3.25
-  increaseBetAmmount: 0.5
-  decreaseBetAmmount: 0.5
+  startingBetAmmount: 0.75
+  increaseBetAmmount: 2
+  decreaseBetAmmount: 2
 --- !u!114 &1349003266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6578,9 +6578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '3.12
-
-'
+  m_text: 0.75
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
