@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6f93c5a3-54f1-4cc9-9a20-d1e8e36c1ced" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable/Coin Variable.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable/Coin Variable.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/{0} Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/{0} Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Currency Calculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Currency Calculator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn.Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn.Runtime.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/FlipUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/FlipUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TempDataStorage/data_0.sun" beforeDir="false" afterPath="$PROJECT_DIR$/TempDataStorage/data_0.sun" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Round Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnCurrencyBoard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.annulusgames.lit-motion.animation@a2a6a8cc42e1/Runtime/Components/TransformComponents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Button/Runtime/ButtonUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/ObjectPooling/PoolHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Variables/Runtime/Integer_Variable/IntegerVariable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -121,7 +125,8 @@
       <workItem from="1763443610855" duration="13360000" />
       <workItem from="1763519078262" duration="1961000" />
       <workItem from="1763523795240" duration="23181000" />
-      <workItem from="1763606162410" duration="15946000" />
+      <workItem from="1763606162410" duration="18744000" />
+      <workItem from="1763636616259" duration="1966000" />
     </task>
     <servers />
   </component>

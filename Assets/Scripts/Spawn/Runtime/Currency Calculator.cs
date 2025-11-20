@@ -3,6 +3,7 @@ using UnityEngine;
 using VirtueSky.Events;
 using VirtueSky.Variables;
 
+
 public class CurrencyCalculator : MonoBehaviour
 {
     public IntegerEvent currencyMultiplierIntegerEvent;

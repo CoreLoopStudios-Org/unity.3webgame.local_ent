@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2938858830352969446}
   - component: {fileID: 8179523571228498574}
   - component: {fileID: 8860466380368259335}
+  - component: {fileID: -3750087191797386010}
   m_Layer: 5
   m_Name: '{0} Button'
   m_TagString: Untagged
@@ -120,17 +121,94 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8179523571228498574}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3750087191797386010}
+        m_TargetAssemblyTypeName: LitMotion.Animation.LitMotionAnimation, LitMotion.Animation
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   clickButtonEvent: {fileID: 11400000, guid: 9a41849ba5b114ea8a8170633b75a2a3, type: 2}
   isMotion: 1
   easingTypes: 15
   scale: 0.9
   isShrugOver: 1
   timeShrug: 0.2
-  strength: 0.2
+  strength: 0.1
   useSoundFx: 1
   playSfxEvent: {fileID: 11400000, guid: 69784be2f515a4847aa35ecdbb2e083f, type: 2}
   soundDataClickButton: {fileID: 11400000, guid: f9724595e946b41e08c0da8c2ef1cfb8, type: 2}
+--- !u!114 &-3750087191797386010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323385442849834544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc6819e64e4c44beb63ea2ef45e1a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LitMotion.Animation::LitMotion.Animation.LitMotionAnimation
+  playOnAwake: 0
+  animationMode: 0
+  components:
+  - rid: 650696942277099708
+  references:
+    version: 2
+    RefIds:
+    - rid: 650696942277099708
+      type: {class: TransformRotationAnimation, ns: LitMotion.Animation.Components, asm: LitMotion.Animation}
+      data:
+        displayName: Rotation
+        enabled: 1
+        target: {fileID: 6442265710494941837}
+        settings:
+          startValue: {x: 0, y: 0, z: 0}
+          endValue: {x: 0, y: 180, z: 0}
+          duration: 1
+          ease: 14
+          customEaseCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          delay: 0
+          delayType: 0
+          loops: 1
+          loopType: 0
+          cancelOnError: 0
+          skipValuesDuringDelay: 0
+          immediateBind: 0
+          schedulerType: 0
+          additionalSettings: 0
+        relative: 0
+        useWorldSpace: 0
 --- !u!1 &7086557036871377659
 GameObject:
   m_ObjectHideFlags: 0
