@@ -974,6 +974,9 @@ MonoBehaviour:
   currencyMultiplierText: {fileID: 1263779194}
   earnedCurrencyText: {fileID: 0}
   betText: {fileID: 79044367}
+  multiplier: {fileID: 0}
+  betValue: {fileID: 0}
+  mineCountValue: {fileID: 0}
 --- !u!1 &194720218
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,6 +5093,9 @@ MonoBehaviour:
   currencyMultiplierText: {fileID: 1814565181}
   earnedCurrencyText: {fileID: 2070539799}
   betText: {fileID: 1977632762}
+  multiplier: {fileID: 11400000, guid: 54eed80b227fe4a4c8c9b5841ad4e52e, type: 2}
+  betValue: {fileID: 11400000, guid: 4cce74ca65e7692499535b5ed933aaf9, type: 2}
+  mineCountValue: {fileID: 11400000, guid: eb04787ac735a4ce084d68a0699872d8, type: 2}
 --- !u!114 &1349003265
 MonoBehaviour:
   m_ObjectHideFlags: 0

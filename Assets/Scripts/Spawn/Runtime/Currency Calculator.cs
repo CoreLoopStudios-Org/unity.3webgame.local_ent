@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using VirtueSky.Events;
+using VirtueSky.Variables;
 
 public class CurrencyCalculator : MonoBehaviour
 {
@@ -13,9 +14,9 @@ public class CurrencyCalculator : MonoBehaviour
     public TMP_Text earnedCurrencyText;
     public TMP_Text betText;
     
-    private float multiplier;
-    private float betValue;
-    private int mineCountValue;
+    [SerializeField] FloatVariable multiplier;
+    [SerializeField] FloatVariable betValue;
+    [SerializeField] IntegerVariable mineCountValue;
     private float currencyToEarnNext;
     private int safeTilesRevealed = 0;
     
@@ -41,13 +42,14 @@ public class CurrencyCalculator : MonoBehaviour
     {
         if (mineCount >= 2 && mineCount <= 24)
         {
-            mineCountValue = mineCount;
+            mineCountValue.Value = mineCount;
             safeTilesRevealed = 0;
-            betValue = float.Parse(betText.text);
+            //
+            betValue.Value = float.Parse(betText.text);
             //mineCountValue = float.Parse(mineCountText.text);
             
-            multiplier = CalculateMultiplier(safeTilesRevealed, mineCountValue);
-            currencyMultiplierText.text = (betValue*multiplier).ToString("F2");
+            multiplier.Value = CalculateMultiplier(safeTilesRevealed, mineCountValue.Value);
+            currencyMultiplierText.text = (betValue.Value*multiplier.Value).ToString("F2");
         }
     }
 
@@ -59,7 +61,7 @@ public class CurrencyCalculator : MonoBehaviour
         earnedCurrencyText.text = currencyMultiplierText.text;
         
         //update next flip earnable currency
-        float nextMultiplier = CalculateMultiplier(safeTilesRevealed, mineCountValue);
+        float nextMultiplier = CalculateMultiplier(safeTilesRevealed, mineCountValue.Value);
         currencyMultiplierText.text = ((float.Parse(earnedCurrencyText.text))*nextMultiplier).ToString("F2");
     }
     
@@ -84,26 +86,26 @@ public class CurrencyCalculator : MonoBehaviour
     {
         if (int.TryParse(mineCountText.text, out int mines))
         {
-            mineCountValue = mines;
-            betValue = float.Parse(betText.text);
-            float multiplier = CalculateMultiplier(0, mineCountValue);
-            currencyMultiplierText.text = (betValue * multiplier).ToString("F2");
+            mineCountValue.Value = mines;
+            betValue.Value = float.Parse(betText.text);
+            float tempMultiplier = CalculateMultiplier(0, mineCountValue.Value);
+            currencyMultiplierText.text = (betValue.Value * tempMultiplier).ToString("F2");
         }
     }
     
     public void UpdateCurrencyViaBet()
     {
-        betValue = float.Parse(betText.text);
-        float multiplier = CalculateMultiplier(safeTilesRevealed, mineCountValue);
+        betValue.Value = float.Parse(betText.text);
+        float nextMultiplier = CalculateMultiplier(safeTilesRevealed, mineCountValue.Value);
         
         if (safeTilesRevealed == 0)
         {
-            currencyMultiplierText.text = (betValue * multiplier).ToString("F2");
+            currencyMultiplierText.text = (betValue.Value * nextMultiplier).ToString("F2");
         }
         else
         {
             float currentEarned = float.Parse(earnedCurrencyText.text);
-            currencyMultiplierText.text = (currentEarned * multiplier).ToString("F2");
+            currencyMultiplierText.text = (currentEarned * nextMultiplier).ToString("F2");
         }
     }
     
