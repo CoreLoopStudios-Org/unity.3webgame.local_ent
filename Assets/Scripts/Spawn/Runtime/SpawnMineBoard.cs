@@ -18,7 +18,6 @@ public class SpawnMineBoard : MonoBehaviour
     
     void OnEnable()
     {
-        
     }
 
     void OnDisable()

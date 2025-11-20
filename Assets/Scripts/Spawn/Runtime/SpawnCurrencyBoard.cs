@@ -46,19 +46,24 @@ public class SpawnCurrencyBoard : MonoBehaviour
     public void OnButtonClick(int i)
     {
         moneyButtonClickedIndex.Raise(i);
+        int value;
         switch (i)
         {
-            case 0: 
-                moneyCountText.text = (i+2).ToString();
+            case 0:
+                value = i + 2;
+                moneyCountText.text = value.ToString();
                 break;
             case 1: 
-                moneyCountText.text = (i+5).ToString();
+                value = i + 5;
+                moneyCountText.text = value.ToString();
                 break;
             case 2: 
-                moneyCountText.text = (i+7).ToString();
+                value = i + 7;
+                moneyCountText.text = value.ToString();
                 break;
             case 3:
-                moneyCountText.text = (i+10).ToString();
+                value = i + 10;
+                moneyCountText.text = value.ToString();
                 break;
         }
        

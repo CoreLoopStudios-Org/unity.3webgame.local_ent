@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f93c5a3-54f1-4cc9-9a20-d1e8e36c1ced" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnCurrencyBoard.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnCurrencyBoard.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/{0} MineAmountSetButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/{0} MineAmountSetButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/{0} MoneyValue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/{0} MoneyValue.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Betting Currency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Betting Currency.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/MinesPopUpButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/PopUpButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/MinesPopUpButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/PopUpButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Currency Calculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Currency Calculator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnCurrencyBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnCurrencyBoard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnMineBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnMineBoard.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +32,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Round Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnCurrencyBoard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Betopia/Documents/GitHub/unity.3webgame.local_ent/Assets/Scripts/Spawn/Runtime/SpawnMineBoard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Button/Runtime/ButtonUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/ObjectPooling/PoolHandle.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -47,23 +45,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "Build-Fixed",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Build-Fixed&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.0b10\Editor\Unity.exe" />
@@ -85,15 +83,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13368">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="13368" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -121,7 +117,8 @@
       <workItem from="1763432288731" duration="2708000" />
       <workItem from="1763443610855" duration="13360000" />
       <workItem from="1763519078262" duration="1961000" />
-      <workItem from="1763523795240" duration="20060000" />
+      <workItem from="1763523795240" duration="23181000" />
+      <workItem from="1763606162410" duration="7624000" />
     </task>
     <servers />
   </component>
