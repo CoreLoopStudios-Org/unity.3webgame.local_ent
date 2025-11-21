@@ -8,8 +8,8 @@ public class RoundTimer : MonoBehaviour
 {
     [SerializeField] private float roundDuration = 120f;
     [SerializeField] private TMP_Text roundTimeText; 
-
-    public EventNoParam eventNoParm;
+    
+    public BooleanEvent roundEndEvent;
     
     private void OnEnable()
     {
@@ -19,7 +19,8 @@ public class RoundTimer : MonoBehaviour
 
     private void OnComplete()
     {
-        Debug.Log("Time Up");
+        Debug.Log("Round Timer OnComplete");
+        roundEndEvent.Raise(true);
     }
     
 
