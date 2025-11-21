@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using VirtueSky.Events;
+using VirtueSky.UIButton;
 using Random = UnityEngine.Random;
 
 public class Spawn1 : MonoBehaviour
@@ -38,12 +39,13 @@ public class Spawn1 : MonoBehaviour
     {
         if (show)
         {
-            PlayGame();
+            QuickPlayGame();
         }
     }
 
     public void QuickPlayGame()
     {
+        DisableAllButtons();
         foreach (var index in arr2)
         {
             var buttonGO = transform.GetChild(index).gameObject;
@@ -53,6 +55,7 @@ public class Spawn1 : MonoBehaviour
     }
     public void PlayGame()
     {
+        DisableAllButtons();
         StartCoroutine(ActivateRewards());
     }
 
@@ -140,5 +143,15 @@ public class Spawn1 : MonoBehaviour
         }
         isSpawned = false;
         
+    }
+
+    public void DisableAllButtons()
+    {
+        var transformChildCount = transform.childCount;
+        for (int i = transformChildCount - 1; i >= 0; i--)
+        {
+            var buttonUI = transform.GetChild(i).GetComponent<ButtonUI>();
+            buttonUI.enabled = false;
+        }
     }
 }
