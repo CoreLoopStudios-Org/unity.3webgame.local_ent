@@ -1,65 +1,38 @@
 using System;
 using TMPro;
 using UnityEngine;
+using VirtueSky.Core;
 using VirtueSky.Events;
 
 public class RoundTimer : MonoBehaviour
 {
     [SerializeField] private float roundDuration = 120f;
     [SerializeField] private TMP_Text roundTimeText; 
-    private float currentRoundTime;
-    private bool isTimeRunning = false;
 
     public EventNoParam eventNoParm;
     
     private void OnEnable()
     {
-        eventNoParm.AddListener(TimerSetReset);
-    }
-
-
-    private void OnDisable()
-    {
-        eventNoParm.RemoveListener(TimerSetReset);
-    }
-
-    private void TimerSetReset()
-    {
-        isTimeRunning = true;
+        App.Delay(roundDuration, OnComplete, DisplayTime, false, true);
     }
     
-    private void Start()
-    {
-        currentRoundTime = roundDuration;
-    }
 
-    private void Update()
+    private void OnComplete()
     {
-        if (isTimeRunning)
-        {
-            if (currentRoundTime > 0)
-            {
-                currentRoundTime -= Time.deltaTime;  
-                DisplayTime(currentRoundTime);
-            }
-            else
-            {
-                currentRoundTime = 0f;
-                DisplayTime(currentRoundTime); 
-            }
-        }
-       
+        Debug.Log("Time Up");
     }
+    
 
     private void DisplayTime(float time)
     {
-        int hours = Mathf.FloorToInt(time / 3600);
-        int minutes = Mathf.FloorToInt((time % 3600) / 60);
-        int seconds = Mathf.FloorToInt(time % 60);
+        var remainingTime = roundDuration - time;
+        int hours = Mathf.FloorToInt(remainingTime / 3600);
+        int minutes = Mathf.FloorToInt((remainingTime % 3600) / 60);
+        int seconds = Mathf.FloorToInt(remainingTime % 60);
         
         roundTimeText.text = $"{hours:00}:{minutes:00}:{seconds:00}";
 
-        if (time <= 30f)
+        if (remainingTime <= 30f)
         {
             roundTimeText.color = Color.red;
         }

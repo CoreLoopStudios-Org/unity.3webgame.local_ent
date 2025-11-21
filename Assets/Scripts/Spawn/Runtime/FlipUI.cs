@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using VirtueSky.Events;
 using VirtueSky.UIButton;
 
+
 public class FlipUI : MonoBehaviour
 {
     
@@ -13,7 +14,6 @@ public class FlipUI : MonoBehaviour
     private void OnEnable()
     {
         integerEvent.AddListener(Flipface);
-        //TimeSetReset();
     }
 
 
@@ -26,9 +26,11 @@ public class FlipUI : MonoBehaviour
     public void Flipface(int index)
     {
         var selected = transform.GetChild(index);
-        selected.GetComponent<Image>().color = new Color32(0, 0, 0, 0);
-        var buttonUI = selected.GetComponent<ButtonUI>();
-        buttonUI.enabled = false;
+        selected.GetComponent<Image>().color = new Color32(255, 255, 0, 100);
+
+        
+        //var buttonUI = selected.GetComponent<ButtonUI>();
+        //buttonUI.enabled = false;
     }
     
 }
