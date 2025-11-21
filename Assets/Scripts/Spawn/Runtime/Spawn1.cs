@@ -42,7 +42,7 @@ public class Spawn1 : MonoBehaviour
         }
     }
 
-    public void PlayGame()
+    public void QuickPlayGame()
     {
         foreach (var index in arr2)
         {
@@ -51,7 +51,7 @@ public class Spawn1 : MonoBehaviour
         }
 
     }
-    public void QuickPlayGame()
+    public void PlayGame()
     {
         StartCoroutine(ActivateRewards());
     }
