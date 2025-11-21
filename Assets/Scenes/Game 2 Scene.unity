@@ -1616,17 +1616,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1349003263}
     m_Modifications:
+    - target: {fileID: 852294403650120184, guid: 1af27a7198ee99c45921d50c599f4962, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 856837755804550398, guid: 1af27a7198ee99c45921d50c599f4962, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -7.3815
+      objectReference: {fileID: 0}
+    - target: {fileID: 856837755804550398, guid: 1af27a7198ee99c45921d50c599f4962, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -7.3815
+      objectReference: {fileID: 0}
     - target: {fileID: 6323385442849834544, guid: 1af27a7198ee99c45921d50c599f4962, type: 3}
       propertyPath: m_Name
       value: '{0} Button For Game 2'
       objectReference: {fileID: 0}
     - target: {fileID: 6323385442849834544, guid: 1af27a7198ee99c45921d50c599f4962, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6339501997422128712, guid: 1af27a7198ee99c45921d50c599f4962, type: 3}
-      propertyPath: m_fontSize
-      value: 18
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6442265710494941837, guid: 1af27a7198ee99c45921d50c599f4962, type: 3}
       propertyPath: m_Pivot.x
