@@ -25,12 +25,14 @@ public class FlipUI : MonoBehaviour
 
     public void Flipface(int index)
     {
-        var selected = transform.GetChild(index);
-        selected.GetComponent<Image>().color = new Color32(255, 255, 0, 100);
+        {
+            var selected = transform.GetChild(index);
+            selected.GetComponent<Image>().color = new Color32(0, 0, 255, 100);
 
         
-        //var buttonUI = selected.GetComponent<ButtonUI>();
-        //buttonUI.enabled = false;
+            var buttonUI = selected.GetComponent<ButtonUI>();
+            buttonUI.enabled = false;
+        }
     }
     
 }
