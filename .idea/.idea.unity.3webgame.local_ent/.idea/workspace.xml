@@ -9,7 +9,9 @@
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/{0} Button For Game 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/{0} Button For Game 2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game 2 Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game 2 Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/FlipUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/FlipUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnGame2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn1.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnGame2.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TempDataStorage/data_0.sun" beforeDir="false" afterPath="$PROJECT_DIR$/TempDataStorage/data_0.sun" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/b5/bd5364c1/Void.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scriptable/RewardsScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scriptable/Variable/NewScriptableObjectScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Betting Currency.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Currency Calculator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/PopUpButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnCurrencyBoard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.annulusgames.lit-motion.animation@a2a6a8cc42e1/Runtime/Components/TransformComponents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Button/Runtime/ButtonUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Events/Runtime/Base_Event/BaseEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/ObjectPooling/PoolHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Variables/Runtime/Integer_Variable/IntegerVariable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Variables/Runtime/virtuesky.sunflower.variable.asmdef" root0="SKIP_HIGHLIGHTING" />
@@ -48,23 +54,23 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Game-2-Grid&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "History",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.0b10\Editor\Unity.exe" />
@@ -127,6 +133,8 @@
       <workItem from="1763709076277" duration="142000" />
       <workItem from="1763709229123" duration="1437000" />
       <workItem from="1763714029703" duration="6452000" />
+      <workItem from="1763869310396" duration="12000" />
+      <workItem from="1763869325101" duration="7191000" />
     </task>
     <servers />
   </component>

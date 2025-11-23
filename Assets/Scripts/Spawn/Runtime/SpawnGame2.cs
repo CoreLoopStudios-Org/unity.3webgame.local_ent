@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,20 +7,32 @@ using VirtueSky.Events;
 using VirtueSky.UIButton;
 using Random = UnityEngine.Random;
 
-public class Spawn1 : MonoBehaviour
+public class SpawnGame2 : MonoBehaviour
 {
+    [Header("Spawn properties")]
     public Button prefab;
     public Color[] prefabColors;
     public EventNoParam eventNoParm;
     public IntegerEvent clickedIndex;
-    public BooleanEvent roundEndEvent;
     
     private bool isSpawned = false;
-    int[] arr = new int[100];
-    int[] arr2 = new int[20];
-
     
+    [Header("Reward properties")]
+    public BooleanEvent roundEndEvent;
+    int[] arr = new int[100];
+    [SerializeField] Color[] rarityColors = new Color[0];
 
+    public struct RewardData
+    {
+        public int rewardNumber;
+        public int rarity;
+    }
+    
+    private RewardData[] arr2 = new RewardData[20];
+     
+    
+    
+    
     private void OnEnable()
     {
         Spawn100();
@@ -48,8 +59,10 @@ public class Spawn1 : MonoBehaviour
         DisableAllButtons();
         foreach (var index in arr2)
         {
-            var buttonGO = transform.GetChild(index).gameObject;
+            var buttonGO = transform.GetChild(index.rewardNumber).gameObject;
             buttonGO.transform.GetChild(0).gameObject.SetActive(true);
+            Image image = buttonGO.GetComponent<Image>(); 
+            image.color = GetRarityColor(index.rarity);
         }
 
     }
@@ -63,8 +76,10 @@ public class Spawn1 : MonoBehaviour
     {
         foreach (var item in arr2)
         {
-            var buttonGO = transform.GetChild(item).gameObject;
+            var buttonGO = transform.GetChild(item.rewardNumber).gameObject;
             buttonGO.transform.GetChild(0).gameObject.SetActive(true);
+            Image image = buttonGO.GetComponent<Image>(); 
+            image.color = GetRarityColor(item.rarity);
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -79,6 +94,32 @@ public class Spawn1 : MonoBehaviour
         }
     }
         
+    private int GetRandomRarity()
+    {
+        float rand = Random.Range(0f, 100f);
+        if (rand < 70f) return 0; //  (70%)
+        if (rand < 90f) return 1; //  (20%)
+        return 2; //  (10%)
+    }
+
+    private Color GetRarityColor(int rarity)
+    {
+        switch(rarity)
+        {
+            case 0: return rarityColors[0];//blue
+            case 1: return rarityColors[1];//purple
+            case 2: return rarityColors[2];//gold
+            default: return Color.white;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     [ContextMenu("Spawn")]
     public void Spawn100()
@@ -103,9 +144,18 @@ public class Spawn1 : MonoBehaviour
         
         for (int i = 0; i < arr.Length; i++) arr[i] = i;
         Shuffle(arr);
-        for(int i=0; i<20; i++) arr2[i] = arr[i];
+        for (int i = 0; i < 20; i++)
+        {
+            arr2[i] = new RewardData 
+            { 
+                rewardNumber = arr[i], 
+                rarity = GetRandomRarity() 
+            };
+        }
         isSpawned = true;
     }
+    
+    
 
     [ContextMenu("Reset")]
     public void Reset()

@@ -1250,9 +1250,9 @@ RectTransform:
   - {fileID: 621572596}
   m_Father: {fileID: 2036358183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -454}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -200, y: -473.5}
   m_SizeDelta: {x: 400, y: 850}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471338817
@@ -3241,7 +3241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caee4508308d37c4782cced18cb20a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Spawn.Runtime::RoundTimer
-  roundDuration: 10
+  roundDuration: 120
   roundTimeText: {fileID: 112105856}
   roundEndEvent: {fileID: 11400000, guid: 6d2d85a9b4afea34791dc4def8081ce3, type: 2}
 --- !u!114 &1349003269
@@ -3742,19 +3742,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Spawn.Runtime::Spawn1
   prefab: {fileID: 8860466380368259335, guid: 1af27a7198ee99c45921d50c599f4962, type: 3}
   prefabColors:
-  - {r: 0.5490196, g: 0.7882354, b: 0.1411765, a: 1}
-  - {r: 0.6784314, g: 1, b: 0.1843137, a: 1}
-  - {r: 0.4980392, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0.3921569, b: 0, a: 1}
-  - {r: 0.1333333, g: 0.5450981, b: 0.1333333, a: 1}
-  - {r: 0.1960784, g: 0.8039216, b: 0.1960784, a: 1}
-  - {r: 0.5607843, g: 0.7372549, b: 0.5607843, a: 1}
-  - {r: 0.5647059, g: 0.9333334, b: 0.5647059, a: 1}
-  - {r: 0.1803922, g: 0.5450981, b: 0.3411765, a: 1}
-  - {r: 0.2352941, g: 0.7019608, b: 0.4431373, a: 1}
+  - {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}
+  - {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}
+  - {r: 0.7529413, g: 0.7529413, b: 0.7529413, a: 1}
+  - {r: 0.8274511, g: 0.8274511, b: 0.8274511, a: 1}
+  - {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  - {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  - {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  - {r: 0.5, g: 0.5, b: 0.5, a: 1}
   eventNoParm: {fileID: 11400000, guid: f5dc5cc0f6f98f34f9748bf477e979cb, type: 2}
   clickedIndex: {fileID: 11400000, guid: b0c04fe698dbfca4486654e97581049f, type: 2}
   roundEndEvent: {fileID: 11400000, guid: 6d2d85a9b4afea34791dc4def8081ce3, type: 2}
+  rarityColors:
+  - {r: 0, g: 0.7490196, b: 1, a: 1}
+  - {r: 0.7803922, g: 0.08235294, b: 0.5215687, a: 1}
+  - {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1948235714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4007,10 +4011,10 @@ RectTransform:
   - {fileID: 471338814}
   m_Father: {fileID: 198090472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225, y: -140}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -30, y: -30}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036358184
 MonoBehaviour:
