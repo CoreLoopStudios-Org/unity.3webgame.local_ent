@@ -7,10 +7,37 @@
     <list default="true" id="6f93c5a3-54f1-4cc9-9a20-d1e8e36c1ced" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/{0} Button For Game 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/{0} Button For Game 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/{0} Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/{0} Button.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game 2 Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game 2 Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/FlipUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/FlipUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnGame2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Spawn1.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnGame2.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Highlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Highlight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnGame2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnGame2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AddCurrency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/AddCurrency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Arrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CoinFrame.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CoinFrame.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CurrencyFrame.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CurrencyFrame.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/DeductCurrency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/DeductCurrency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Frame 16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Frame 16.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Frame 17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Frame 17.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Frame 90.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Frame 90.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Mines arrow background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Mines arrow background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavBar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/NavBar.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ready Clicked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ready Clicked.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ready unClicked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ready unClicked.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TempDataStorage/data_0.sun" beforeDir="false" afterPath="$PROJECT_DIR$/TempDataStorage/data_0.sun" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +53,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/b5/bd5364c1/Void.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scriptable/RewardsScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scriptable/Variable/NewScriptableObjectScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scriptable/RewardData.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Betting Currency.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Currency Calculator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/PopUpButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,7 +64,9 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.annulusgames.lit-motion.animation@a2a6a8cc42e1/Runtime/Components/TransformComponents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Button/Runtime/ButtonUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Events/Runtime/Base_Event/BaseEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Events/Runtime/Integer_Event/IntegerEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/ObjectPooling/PoolHandle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Variables/Runtime/Float_Variable/FloatVariable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Variables/Runtime/Integer_Variable/IntegerVariable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.virtuesky.sunflower@4878b5f3b89b/VirtueSky/Variables/Runtime/virtuesky.sunflower.variable.asmdef" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -134,7 +162,7 @@
       <workItem from="1763709229123" duration="1437000" />
       <workItem from="1763714029703" duration="6452000" />
       <workItem from="1763869310396" duration="12000" />
-      <workItem from="1763869325101" duration="7191000" />
+      <workItem from="1763869325101" duration="20220000" />
     </task>
     <servers />
   </component>

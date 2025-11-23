@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using VirtueSky.Events;
 using VirtueSky.UIButton;
+using VirtueSky.Variables;
 using Random = UnityEngine.Random;
 
 public class SpawnGame2 : MonoBehaviour
@@ -21,14 +23,17 @@ public class SpawnGame2 : MonoBehaviour
     public BooleanEvent roundEndEvent;
     int[] arr = new int[100];
     [SerializeField] Color[] rarityColors = new Color[0];
+    [SerializeField] private string[] rarityNames;
 
     public struct RewardData
     {
         public int rewardNumber;
         public int rarity;
+        
     }
     
     private RewardData[] arr2 = new RewardData[20];
+    
      
     
     
@@ -57,12 +62,14 @@ public class SpawnGame2 : MonoBehaviour
     public void QuickPlayGame()
     {
         DisableAllButtons();
-        foreach (var index in arr2)
+        foreach (var item in arr2)
         {
-            var buttonGO = transform.GetChild(index.rewardNumber).gameObject;
-            buttonGO.transform.GetChild(0).gameObject.SetActive(true);
-            Image image = buttonGO.GetComponent<Image>(); 
-            image.color = GetRarityColor(index.rarity);
+            var buttonGO = transform.GetChild(item.rewardNumber).gameObject;
+            var prizeObj = buttonGO.transform.GetChild(0);
+            prizeObj.gameObject.SetActive(true);
+            prizeObj.gameObject.name = rarityNames[item.rarity];
+            Image image = prizeObj.gameObject.GetComponent<Image>(); 
+            image.color = GetRarityColor(item.rarity);
         }
 
     }
@@ -78,8 +85,10 @@ public class SpawnGame2 : MonoBehaviour
         {
             var buttonGO = transform.GetChild(item.rewardNumber).gameObject;
             buttonGO.transform.GetChild(0).gameObject.SetActive(true);
-            Image image = buttonGO.GetComponent<Image>(); 
-            image.color = GetRarityColor(item.rarity);
+            var prizeObj = buttonGO.transform.GetChild(0);
+            prizeObj.gameObject.SetActive(true);
+            prizeObj.gameObject.name = rarityNames[item.rarity];
+            Image image = prizeObj.gameObject.GetComponent<Image>(); 
             yield return new WaitForSeconds(0.5f);
         }
     }
