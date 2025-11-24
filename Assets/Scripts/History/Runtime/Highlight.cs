@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using LitMotion.Animation;
 using UnityEngine;
 using UnityEngine.UI;
 using VirtueSky.UIButton;
@@ -15,10 +16,11 @@ public class Highlight : MonoBehaviour
     int tier2PrizeCount = 0;
     int tier3PrizeCount = 0;
     int priority;
+    private int columnToHighlight;
     
     
     public int[] columnPriorityArray = new int[10];
-    public int[] maxPrizePerColumnArray = new int[10];
+    public static int[] maxPrizePerColumnArray = new int[10];
     public int[] rowReportArray = new int[10]; 
     public int[,] columnReportMap = new int[10,10];
     public Color[,] spawnGrid = new Color[10, 10];
@@ -157,6 +159,34 @@ public class Highlight : MonoBehaviour
     }
     #endregion
 
+    #region PowerUp
+    [ContextMenu("Brush Action")]
+    public void OnActionBrush()
+    {
+        SpawnGame2.RewardData[] data = SpawnGame2.arr2;
+        List<int> rewardNumbers = data.Select(d => d.rewardNumber).ToList();
+        
+        for (int col = 0; col < columns; col++)
+        {
+
+            for (int row = 0; row < rows; row++)
+            {
+                int index = row * columns + col;
+                var child = transform.GetChild(index).gameObject;
+                child.GetComponent<LitMotionAnimation>().Play();
+                if (rewardNumbers.Contains(index))
+                {
+                    var glowObject = child.transform.GetChild(3).gameObject;
+                    glowObject.SetActive(true);
+                    glowObject.GetComponent<LitMotionAnimation>().Play();
+                
+                }
+            }
+        }
+    }
+    
+
+    #endregion
     
     #region Debugger
     [ContextMenu("Debug Color array")]
