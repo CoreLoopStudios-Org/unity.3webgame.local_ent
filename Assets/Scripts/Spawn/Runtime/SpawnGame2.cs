@@ -32,7 +32,7 @@ public class SpawnGame2 : MonoBehaviour
         
     }
     
-    private RewardData[] arr2 = new RewardData[20];
+    public static RewardData[] arr2 = new RewardData[20];
     
      
     
