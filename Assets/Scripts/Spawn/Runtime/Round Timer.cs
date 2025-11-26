@@ -27,11 +27,11 @@ public class RoundTimer : MonoBehaviour
     private void DisplayTime(float time)
     {
         var remainingTime = roundDuration - time;
-        int hours = Mathf.FloorToInt(remainingTime / 3600);
-        int minutes = Mathf.FloorToInt((remainingTime % 3600) / 60);
+        int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
+        int centiseconds = Mathf.FloorToInt((remainingTime * 100) % 100);
         
-        roundTimeText.text = $"{hours:00}:{minutes:00}:{seconds:00}";
+        roundTimeText.text = $"{minutes:00}  {seconds:00}  {centiseconds:00}";
 
         if (remainingTime <= 30f)
         {

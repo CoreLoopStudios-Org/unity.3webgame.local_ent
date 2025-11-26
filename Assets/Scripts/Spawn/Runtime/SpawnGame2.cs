@@ -213,4 +213,14 @@ public class SpawnGame2 : MonoBehaviour
             buttonUI.enabled = false;
         }
     }
+    
+    public void EnableAllButtons()
+    {
+        var transformChildCount = transform.childCount;
+        for (int i = transformChildCount - 1; i >= 0; i--)
+        {
+            var buttonUI = transform.GetChild(i).GetComponent<ButtonUI>();
+            buttonUI.enabled = true;
+        }
+    }
 }
