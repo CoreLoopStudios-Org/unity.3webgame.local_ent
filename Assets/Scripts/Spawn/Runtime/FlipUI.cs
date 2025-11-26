@@ -27,7 +27,7 @@ public class FlipUI : MonoBehaviour
     {
         {
             var selected = transform.GetChild(index);
-            selected.GetComponent<Image>().color = new Color32(0, 255, 0, 50);
+            selected.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
 
         
             var buttonUI = selected.GetComponent<ButtonUI>();
