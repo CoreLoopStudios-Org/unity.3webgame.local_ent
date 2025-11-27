@@ -2534,8 +2534,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneSwitcher
   HomeScene: Game 2 LobbyScene
   GameScene: Game 2 GameScene
-  play: {fileID: 0}
-  home: {fileID: 0}
+  play: {fileID: 11400000, guid: 87dcd73a068703c4e9606ab2a868ba34, type: 2}
+  home: {fileID: 11400000, guid: 2e2651f1fbfe0d5408d9fd70b913482f, type: 2}
 --- !u!4 &602395981
 Transform:
   m_ObjectHideFlags: 0
@@ -7752,6 +7752,7 @@ MonoBehaviour:
   - {r: 0.74509805, g: 0.84313726, b: 0.1882353, a: 1}
   eventNoParm: {fileID: 11400000, guid: f5dc5cc0f6f98f34f9748bf477e979cb, type: 2}
   clickedIndex: {fileID: 11400000, guid: b0c04fe698dbfca4486654e97581049f, type: 2}
+  spawnAmount: {fileID: 11400000, guid: dde3c564b5e9712449ed5cbd4e5e2fec, type: 2}
   roundEndEvent: {fileID: 11400000, guid: 6d2d85a9b4afea34791dc4def8081ce3, type: 2}
   rarityColors:
   - {r: 0, g: 0.02782917, b: 1, a: 1}
@@ -7907,7 +7908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caee4508308d37c4782cced18cb20a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Spawn.Runtime::RoundTimer
-  roundDuration: 120
+  roundDuration: 10
   roundTimeText: {fileID: 112105856}
   roundEndEvent: {fileID: 11400000, guid: 6d2d85a9b4afea34791dc4def8081ce3, type: 2}
   integerEvent: {fileID: 11400000, guid: b0c04fe698dbfca4486654e97581049f, type: 2}

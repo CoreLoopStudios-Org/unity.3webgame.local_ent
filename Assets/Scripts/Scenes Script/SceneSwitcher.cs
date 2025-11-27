@@ -27,7 +27,7 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (isPlay)
         {
-            SceneManager.LoadScene(GameScene, LoadSceneMode.Additive);
+            SceneManager.LoadScene(GameScene);
         }
     }
     
@@ -36,7 +36,7 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (isHome)
         {
-            SceneManager.LoadScene(HomeScene, LoadSceneMode.Additive);
+            SceneManager.LoadScene(HomeScene);
         }
     }
 }
