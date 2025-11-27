@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/ElProfesorKudo_Firebase_Asset/Scene/ElProfesorKudo - Firebase Toolkit
       Example Scene.unity
     guid: 1e4f53107259f41718bcd497209accaa
+  - enabled: 1
+    path: Assets/Scenes/Game 2 LobbyScene.unity
+    guid: 2203c4dadc0c263499b8ecf324cbb087
+  - enabled: 1
+    path: Assets/Scenes/Game 2 GameScene.unity
+    guid: 5056be99b2806184b9f1d22adcac128a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

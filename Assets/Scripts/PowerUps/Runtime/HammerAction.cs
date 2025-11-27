@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using VirtueSky.Inspector;
 
 public class HammerAction : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class HammerAction : MonoBehaviour
     }
     
     [ContextMenu("Hammer Action")]
+    [Button]
     public void OnActionHammer()
     {
         int currentUsageCount = int.Parse(usageCountText.text);

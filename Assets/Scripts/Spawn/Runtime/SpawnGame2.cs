@@ -16,6 +16,8 @@ public class SpawnGame2 : MonoBehaviour
     public Color[] prefabColors;
     public EventNoParam eventNoParm;
     public IntegerEvent clickedIndex;
+    public IntegerVariable spawnAmount;
+    private int _spawnAmount = 100;
     
     private bool isSpawned = false;
     
@@ -40,18 +42,23 @@ public class SpawnGame2 : MonoBehaviour
     
     private void OnEnable()
     {
-        Spawn100();
+        _spawnAmount = spawnAmount.Value;
+        Spawn(_spawnAmount);
         eventNoParm.AddListener(PlayGame);
         roundEndEvent.AddListener(ShowRewardsOnTimeup);
+        spawnAmount.AddListener(Spawn);
     }
     
     private void OnDisable()
     {
         eventNoParm.RemoveListener(PlayGame);
         roundEndEvent.RemoveListener(ShowRewardsOnTimeup);
+        spawnAmount.RemoveListener(Spawn);
     }
 
-    private void ShowRewardsOnTimeup(bool show)
+    #region Rewards System
+
+      private void ShowRewardsOnTimeup(bool show)
     {
         if (show)
         {
@@ -126,14 +133,16 @@ public class SpawnGame2 : MonoBehaviour
     
     
     
-    
-    
+
+    #endregion
     
     
     [ContextMenu("Spawn")]
-    public void Spawn100()
+    public void Spawn(int amount)
     {
-        for (int i = 0; i < 100; i++)
+        Debug.Log("Spawning " + amount.ToString());
+        _spawnAmount = amount;
+        for (int i = 0; i < amount; i++)
         {
             var button = Instantiate(prefab, transform.position, transform.rotation, transform);
             TMP_Text text = button.GetComponentInChildren<TMP_Text>();
@@ -176,7 +185,7 @@ public class SpawnGame2 : MonoBehaviour
     {
         UnSpawn();
         yield return new WaitForSeconds(i);
-        Spawn100();
+        Spawn(_spawnAmount);
     }
     
     
