@@ -29,6 +29,10 @@ public class SceneSwitcher : MonoBehaviour
         {
             SceneManager.LoadScene(GameScene);
         }
+        /*else
+        {
+            SceneManager.UnloadSceneAsync(GameScene);
+        }*/
     }
     
     
@@ -38,6 +42,10 @@ public class SceneSwitcher : MonoBehaviour
         {
             SceneManager.LoadScene(HomeScene);
         }
+        /*else
+        {
+            SceneManager.UnloadSceneAsync(HomeScene);
+        }*/
     }
 }
  

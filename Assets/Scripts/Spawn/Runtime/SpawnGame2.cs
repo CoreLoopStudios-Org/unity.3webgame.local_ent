@@ -58,7 +58,7 @@ public class SpawnGame2 : MonoBehaviour
 
     #region Rewards System
 
-      private void ShowRewardsOnTimeup(bool show)
+    private void ShowRewardsOnTimeup(bool show)
     {
         if (show)
         {
@@ -68,34 +68,36 @@ public class SpawnGame2 : MonoBehaviour
 
     public void QuickPlayGame()
     {
-        DisableAllButtons();
+        //DisableAllButtons();
         foreach (var item in arr2)
         {
-            var buttonGO = transform.GetChild(item.rewardNumber).gameObject;
-            var prizeObj = buttonGO.transform.GetChild(0);
-            prizeObj.gameObject.SetActive(true);
-            prizeObj.gameObject.name = rarityNames[item.rarity];
-            Image image = prizeObj.gameObject.GetComponent<Image>(); 
-            image.color = GetRarityColor(item.rarity);
+            ActivateRewards(item);
         }
+        Reset();
 
     }
+
+    private void ActivateRewards(RewardData item)
+    {
+        var buttonGO = transform.GetChild(item.rewardNumber).gameObject;
+        var prizeObj = buttonGO.transform.GetChild(0);
+        prizeObj.gameObject.SetActive(true);
+        prizeObj.gameObject.name = rarityNames[item.rarity];
+        Image image = prizeObj.gameObject.GetComponent<Image>(); 
+        image.color = GetRarityColor(item.rarity);
+    }
+
     public void PlayGame()
     {
-        DisableAllButtons();
-        StartCoroutine(ActivateRewards());
+        //DisableAllButtons();
+        StartCoroutine(ActivateRewardsIEnum());
     }
 
-    IEnumerator ActivateRewards()
+    IEnumerator ActivateRewardsIEnum()
     {
         foreach (var item in arr2)
         {
-            var buttonGO = transform.GetChild(item.rewardNumber).gameObject;
-            var prizeObj = buttonGO.transform.GetChild(0);
-            prizeObj.gameObject.SetActive(true);
-            prizeObj.gameObject.name = rarityNames[item.rarity];
-            Image image = prizeObj.gameObject.GetComponent<Image>(); 
-            image.color = GetRarityColor(item.rarity);
+            ActivateRewards(item);
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -178,14 +180,17 @@ public class SpawnGame2 : MonoBehaviour
     [ContextMenu("Reset")]
     public void Reset()
     {
-        StartCoroutine(WaitTime(0.2f));
+        StartCoroutine(WaitTime(1f));
     }
 
     IEnumerator WaitTime(float i)
     {
+        yield return new WaitForSeconds(i); 
+        OnDisable();
+        yield return new WaitForSeconds(i); 
         UnSpawn();
-        yield return new WaitForSeconds(i);
-        Spawn(_spawnAmount);
+        OnEnable();
+        //Spawn(_spawnAmount);
     }
     
     

@@ -5,11 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f93c5a3-54f1-4cc9-9a20-d1e8e36c1ced" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/indexLayout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unity.3webgame.local_ent/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/{0} Button For Game 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/{0} Button For Game 2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game 2 GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game 2 GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game 2 LobbyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game 2 LobbyScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable/Variable/Spawn Index Variable.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable/Variable/Spawn Index Variable.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/Runtime/HammerAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/Runtime/HammerAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes Script/SceneSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes Script/SceneSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/CurrencyCalculatorGame2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/CurrencyCalculatorGame2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Round Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/Round Timer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnGame2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/Runtime/SpawnGame2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/BackGround.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/BackGround.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/Blurr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/Blurr.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/GlowBorder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/GlowBorder.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/Prize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/Prize.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/St.Pat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/St.Pat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/Tile_frame.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Game2/Tile_frame.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +81,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Currency&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Rooms&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -142,6 +160,9 @@
       <workItem from="1764237346456" duration="48000" />
       <workItem from="1764238126850" duration="2347000" />
       <workItem from="1764240865153" duration="1009000" />
+      <workItem from="1764299140435" duration="14449000" />
+      <workItem from="1764313816302" duration="2699000" />
+      <workItem from="1764319895596" duration="3048000" />
     </task>
     <servers />
   </component>
@@ -156,6 +177,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

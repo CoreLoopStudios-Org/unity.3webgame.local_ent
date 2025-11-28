@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,17 +14,37 @@ public class CurrencyCalculatorGame2 : MonoBehaviour
     private List<int> selected = new List<int>();
     int selectedCount = 0;
     [SerializeField] private IntegerVariable currentCoins;
+    public BooleanEvent roundEndEvent;
     
     private void OnEnable()
     {
+        OnStartTimer();
+    }
+
+    private void OnStartTimer()
+    {
+        selected.Clear();
+        currentCoins.Value = int.Parse(availableCoinsText.text);
         selectedTilesText.text = selectedCount.ToString();
-        integerEvent.AddListener(CalculateCurrency);
+        if (currentCoins.Value ! > 5)
+        {
+            integerEvent.AddListener(CalculateCurrency);
+        }
+        roundEndEvent.AddListener(Reset);
     }
 
     private void OnDisable()
     {
+        DisableButtonsOnInsufficientCurrency();
+        OnEndTimer();
+    }
+
+    private void OnEndTimer()
+    {
         integerEvent.RemoveListener(CalculateCurrency);
     }
+
+    #region Currency Calculator
 
     private void CalculateCurrency(int index)
     {
@@ -75,5 +96,20 @@ public class CurrencyCalculatorGame2 : MonoBehaviour
                 buttonUI.enabled = true;
             }
         }
+    }
+    #endregion
+    public void Reset(bool isReset)
+    {
+        if (isReset)
+        {
+            StartCoroutine(WaitTime(01f));
+        }
+    }
+    IEnumerator WaitTime(float i)
+    {
+        yield return new WaitForSeconds(i); 
+        OnEndTimer();
+        yield return new WaitForSeconds(i+5f); 
+        OnStartTimer(); ;
     }
 }
