@@ -27,12 +27,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (isPlay)
         {
-            SceneManager.LoadScene(GameScene);
+            SceneManager.LoadScene(GameScene,  LoadSceneMode.Additive);
         }
-        /*else
-        {
-            SceneManager.UnloadSceneAsync(GameScene);
-        }*/
+
     }
     
     
@@ -40,12 +37,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (isHome)
         {
-            SceneManager.LoadScene(HomeScene);
+            SceneManager.LoadScene(HomeScene, LoadSceneMode.Additive);
         }
-        /*else
-        {
-            SceneManager.UnloadSceneAsync(HomeScene);
-        }*/
+
     }
 }
  

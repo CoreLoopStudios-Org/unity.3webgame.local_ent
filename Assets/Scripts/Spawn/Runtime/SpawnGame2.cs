@@ -161,17 +161,36 @@ public class SpawnGame2 : MonoBehaviour
                 buttonImage.color = prefabColors[colorIndex];
             }
         }
-        
-        for (int i = 0; i < arr.Length; i++) arr[i] = i;
-        Shuffle(arr);
-        for (int i = 0; i < 20; i++)
+
+        if (amount == 50)
         {
-            arr2[i] = new RewardData 
-            { 
-                rewardNumber = arr[i], 
-                rarity = GetRandomRarity() 
-            };
+            Array.Resize(ref arr, amount);
+            for (int i = 0; i < arr.Length; i++) arr[i] = i;
+            Shuffle(arr);
+            for (int i = 0; i < 10; i++)
+            {
+                arr2[i] = new RewardData 
+                { 
+                    rewardNumber = arr[i], 
+                    rarity = GetRandomRarity() 
+                };
+            }
         }
+        else if(amount == 100)
+        {
+            Array.Resize(ref arr, amount);
+            for (int i = 0; i < arr.Length; i++) arr[i] = i;
+            Shuffle(arr);
+            for (int i = 0; i < 20; i++)
+            {
+                arr2[i] = new RewardData 
+                { 
+                    rewardNumber = arr[i], 
+                    rarity = GetRandomRarity() 
+                };
+            }
+        }
+
         isSpawned = true;
     }
     

@@ -6,10 +6,11 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using VirtueSky.Inspector;
+using VirtueSky.Misc;
+using VirtueSky.Variables;
 
 public class HammerAction : MonoBehaviour
 {
-    
     [SerializeField]int usageCount = 3;
     [SerializeField] private TMP_Text usageCountText;
     [SerializeField] private GameObject hammerAnimationGO;
@@ -113,6 +114,10 @@ public class HammerAction : MonoBehaviour
                 animatedObj.gameObject.SetActive(true);
                 Image animImage = animatedObj.gameObject.GetComponent<Image>(); 
                 animImage.color = image.color;
+                
+                var textObj = buttonGO.transform.GetChild(2);
+                TMP_Text text = textObj.GetComponent<TMP_Text>();
+                text.color = Color.white;
 
             }        
         }
