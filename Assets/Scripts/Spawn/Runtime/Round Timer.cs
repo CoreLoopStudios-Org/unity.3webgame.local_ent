@@ -1,15 +1,18 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 using VirtueSky.Core;
 using VirtueSky.Events;
+using VirtueSky.UIButton;
 
 public class RoundTimerAndWin : MonoBehaviour
 {
     [Header("Round Timer Properties")]
     [SerializeField] private float roundDuration = 120f;
+    [SerializeField] private float inBetweenRoundsDuration = 5f;
     [SerializeField] private TMP_Text roundTimeText;
     public BooleanEvent roundEndEvent;
     
@@ -18,20 +21,50 @@ public class RoundTimerAndWin : MonoBehaviour
     private List<int> selected = new List<int>();
     private List<int> won = new List<int>();
     int selectedCount = 0;
+    private bool isEmpty;
 
+    [Header("Enter Exit Properties")]
     public GameObject WinningPanel;
     public GameObject LossingPanel;
+    public GameObject BackToHomeButton;
+    public GameObject nextRoundStartsIn;
+    public TMP_Text nextRoundCountDownText;
     
     private void OnEnable()
     {
-        selected.Clear();
-        won.Clear();
+        OnStartTimer();
+    }
+
+    void OnStartTimer()
+    {
+        nextRoundStartsIn.gameObject.SetActive(false);
         WinningPanel.SetActive(false);
         LossingPanel.SetActive(false);
+        selected.Clear();
+        won.Clear();
         App.Delay(roundDuration, OnComplete, DisplayTime, false, true);
         integerEvent.AddListener(OnSelected);
+        roundEndEvent.AddListener(Reset);
+        DisableButton();
     }
-    
+
+    void OnEndTimer()
+    {
+        roundEndEvent.RemoveListener(Reset);
+        EnableButton();
+    }
+
+    private void OnDisable()
+    {
+        OnEndTimer();
+    }
+
+    void StartNextRound()
+    {
+        nextRoundStartsIn.gameObject.SetActive(true);
+
+        App.Delay(inBetweenRoundsDuration, OnCountdownComplete, DisplayCountDownForNextRound, false, true);
+    }
 
     private void OnComplete()
     {
@@ -39,6 +72,17 @@ public class RoundTimerAndWin : MonoBehaviour
         roundEndEvent.Raise(true);
         integerEvent.RemoveListener(OnSelected);
         WinningCondition();
+    }
+    
+    void ShowResultPanels(bool showWin, bool showLoss)
+    {
+        WinningPanel.SetActive(showWin);
+        LossingPanel.SetActive(showLoss);
+    }
+
+    private void OnCountdownComplete()
+    {
+        OnStartTimer();
     }
 
     #region Timer
@@ -60,6 +104,14 @@ public class RoundTimerAndWin : MonoBehaviour
         {
             roundTimeText.color = Color.white;
         }
+    }
+    
+    private void DisplayCountDownForNextRound(float time)
+    {
+        var remainingTime = inBetweenRoundsDuration - time;
+        int seconds = Mathf.FloorToInt(remainingTime);
+    
+        nextRoundCountDownText.text = seconds.ToString();
     }
     #endregion
     
@@ -86,23 +138,42 @@ public class RoundTimerAndWin : MonoBehaviour
                 }
             }
         }
-        bool isEmpty = !won.Any();
-        if(isEmpty)
-        {
-            WinningPanel.SetActive(false);
-            LossingPanel.SetActive(true);
-        }
-        else
-        {
-            WinningPanel.SetActive(true);
-            LossingPanel.SetActive(false);
-        }
-
+        
+        isEmpty = !won.Any();
+        
+        StartCoroutine(Wait());
 
         Debug.Log("[" + string.Join(", ", won) + "]");
-        
     }
 
     #endregion
-   
+    
+    [ContextMenu("Reset")]
+    public void Reset(bool isReset)
+    {
+        if (isReset)
+        {
+            OnEndTimer();
+            StartCoroutine(Wait());
+        }
+    }
+    
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2f);
+        StartNextRound();
+        ShowResultPanels(!isEmpty, isEmpty);
+    }
+
+    void EnableButton()
+    {
+        var buttonUI = BackToHomeButton.gameObject.GetComponent<ButtonUI>();
+        buttonUI.enabled = true;
+    }
+    
+    void DisableButton()
+    {
+        var buttonUI = BackToHomeButton.gameObject.GetComponent<ButtonUI>();
+        buttonUI.enabled = false;
+    }
 }

@@ -9,18 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1e2751cf33a439b997c1f79b966df48, type: 3}
-  m_Name: Spawn Index Variable
-  m_EditorClassIdentifier: Virtuesky.Sunflower.Variable::VirtueSky.Variables.IntegerVariable
-  description: Sets Board tile count at spawn.
+  m_Script: {fileID: 11500000, guid: e09883a9e2054c19929fd8b3292fa7d9, type: 3}
+  m_Name: Reset Wait Time Variable
+  m_EditorClassIdentifier: Virtuesky.Sunflower.Variable::VirtueSky.Variables.FloatVariable
+  description: 
   valueDebug: 0
   typeId: 0
-  guid: dde3c564b5e9712449ed5cbd4e5e2fec
+  guid: 26fadae15cf6da241b8453fda8c2df56
   customId: 
-  initializeValue: 100
+  initializeValue: 0
   isSetData: 0
   isSaveData: 0
   isRaiseEvent: 0
-  currentValue: 100
+  currentValue: 0
   isClamped: 0
   minMax: {x: 0, y: 100}

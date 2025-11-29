@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -5,12 +6,14 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using VirtueSky.Inspector;
+using VirtueSky.Misc;
+using VirtueSky.Variables;
 
 public class HammerAction : MonoBehaviour
 {
-    
     [SerializeField]int usageCount = 3;
     [SerializeField] private TMP_Text usageCountText;
+    [SerializeField] private GameObject hammerAnimationGO;
     
     int[] arr = new int[100];
     List<int> toDestroyList = new List<int>();
@@ -79,9 +82,7 @@ public class HammerAction : MonoBehaviour
         {
             if (toDestroyList.Contains(i))
             {
-                var buttonGO = transform.GetChild(i).gameObject;
-                Image image = buttonGO.gameObject.GetComponent<Image>(); 
-                image.enabled = false;
+                StartCoroutine(WaitForBreak());
             }        
         }
     }
@@ -94,7 +95,47 @@ public class HammerAction : MonoBehaviour
             (array[n], array[k]) = (array[k], array[n]);
         }
     }
+    
+    IEnumerator WaitForBreak()       //this is redundant :(
+    {
+        hammerAnimationGO.SetActive(true);
+        var transformChildCount = transform.childCount;
+        
+        yield return new WaitForSeconds(.5f);
+        for (int i = transformChildCount - 1; i >= 0; i--)
+        {
+            if (toDestroyList.Contains(i))
+            {
+                var buttonGO = transform.GetChild(i).gameObject;
+                Image image = buttonGO.gameObject.GetComponent<Image>(); 
+                image.enabled = false;
 
+                var animatedObj = buttonGO.transform.GetChild(4);
+                animatedObj.gameObject.SetActive(true);
+                Image animImage = animatedObj.gameObject.GetComponent<Image>(); 
+                animImage.color = image.color;
+                
+                var textObj = buttonGO.transform.GetChild(2);
+                TMP_Text text = textObj.GetComponent<TMP_Text>();
+                text.color = Color.white;
+
+            }        
+        }
+        
+        yield return new WaitForSeconds(.5f);
+
+        for (int i = transformChildCount - 1; i >= 0; i--)
+        {
+            if (toDestroyList.Contains(i))
+            {
+                var buttonGO = transform.GetChild(i).gameObject;
+                var animatedObj = buttonGO.transform.GetChild(4);
+                animatedObj.gameObject.SetActive(false);
+
+            }        
+        }
+        hammerAnimationGO.SetActive(false);
+    }
     
     void DebugFunction(int[] data)
     {
